@@ -26,18 +26,7 @@
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
     },
-    "adminUserName": {
-      "type": "string",
-      "metadata": {
-        "description": "UserName for the Virtual Machine"
-      }
-    },
-    "adminPassword": {
-      "type": "securestring",
-      "metadata": {
-        "description": "Password for the Virtual Machine"
-      }
-    },
+    
     "osType": {
       "type": "string",
       "allowedValues": [
