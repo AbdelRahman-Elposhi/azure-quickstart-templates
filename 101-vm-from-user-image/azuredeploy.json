@@ -47,11 +47,11 @@
   "variables": {
     "location": "[resourceGroup().location]",
     "publicIPAddressName": "Elastix-PublicIP1",
-    "vmName": "myVM",
+    "vmName": "elastix4-fpbx",
     "virtualNetworkName": "Elastix-VNet1",
     "nicName": "Elastix-VMNic1",
     "addressPrefix": "192.168.0.0/16",
-    "subnet1Name": "Subnet-1",
+    "subnet1Name": "Subnet1-ElastixVM",
     "subnet1Prefix": "192.168.100.0/24",
     "publicIPAddressType": "Static",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
@@ -105,7 +105,7 @@
       "properties": {
         "ipConfigurations": [
           {
-            "name": "ipconfig1",
+            "name": "Elastix-ipconfig1",
             "properties": {
               "privateIPAllocationMethod": "Dynamic",
               "publicIPAddress": {
@@ -133,8 +133,6 @@
         },
         "osProfile": {
           "computerName": "[variables('vmName')]",
-          "adminUsername": "[parameters('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]"
         },
         "storageProfile": {
           "osDisk": {
