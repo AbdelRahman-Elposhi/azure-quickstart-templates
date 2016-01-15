@@ -134,6 +134,7 @@
         "computerName": "[variables('vmName')]",
         "adminUsername": "root",
         "adminPassword": "Pa$$w0rd$#"
+        },
         "storageProfile": {
           "osDisk": {
             "name": "[concat(variables('vmName'),'-osDisk')]",
