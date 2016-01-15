@@ -26,7 +26,7 @@
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "Standard_D2",
+      "defaultValue": "Standard_A2",
       "metadata": {
         "description": "Size of the VM"
       }
@@ -40,15 +40,15 @@
   },
   "variables": {
     "api-version": "2015-06-15",
-    "addressPrefix": "10.0.0.0/16",
-    "subnetName": "Subnet",
-    "subnetPrefix": "10.0.0.0/24",
-    "publicIPAddressName": "specializedVMPublicIP",
-    "publicIPAddressType": "Dynamic",
-    "virtualNetworkName": "specializedVMVNET",
+    "addressPrefix": "192.168.0.0/16",
+    "subnetName": "Subnet1-ElastixVM",
+    "subnetPrefix": "192.168.100.0/24",
+    "publicIPAddressName": "Elastix-PublicIP1",
+    "publicIPAddressType": "Static",
+    "virtualNetworkName": "Elastix-VNet1",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]",
-    "nicName": "specializedVMNic"
+    "nicName": "Elastix-VMNic1"
   },
   "resources": [
     {
@@ -84,7 +84,7 @@
       "properties": {
         "ipConfigurations": [
           {
-            "name": "ipconfig1",
+            "name": "Elastix-ipconfig1",
             "properties": {
               "privateIPAllocationMethod": "Dynamic",
               "publicIPAddress": {
